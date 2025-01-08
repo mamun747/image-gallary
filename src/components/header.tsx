@@ -8,6 +8,7 @@ const Header = () => {
   useEffect(() => {
     router.push(searchData ? `/?search=${searchData}` : '/');
   }, [searchData, router]);
+  const open = () => router.push("/?popup=true");
   return (
     <div className="flex justify-between items-center gap-2.5">
       <div className="w-full max-w-xl flex justify-center items-center">
@@ -21,7 +22,7 @@ const Header = () => {
           <SearchIcon />
         </button>
       </div>
-      <button className="px-8 bg-slate-800 text-white text-base uppercase font-bold py-4 rounded-xl hover:bg-slate-700 active:translate-y-0.5">
+      <button className="px-8 bg-slate-800 text-white text-base uppercase font-bold py-4 rounded-xl hover:bg-slate-700 active:translate-y-0.5" onClick={open}>
         Upload
       </button>
     </div>

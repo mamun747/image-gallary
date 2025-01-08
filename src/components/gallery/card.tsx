@@ -4,9 +4,9 @@ import { SaveIcon } from "./icons";
 import { IImage } from "@/types";
 
 const Card: FC<IImage> = (props) => {
-  const { name, url, likes, shares } = props || {};
+  const { name, url, likes, shares }  = props || {};
   return (
-    <figure className="w-fit relative group overflow-hidden rounded">
+    <figure className="w-fit relative group overflow-hidden rounded-md">
   <Image
     alt={name}
     src={url}
